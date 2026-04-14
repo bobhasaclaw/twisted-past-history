@@ -1,0 +1,1 @@
+{"type":"urn:inference-service:problem-details:unprocessable-entity","title":"Unprocessable Entity","status":422,"detail":"body -> width\n  Extra inputs are not permitted (type=extra_forbidden)\nbody -> height\n  Extra inputs are not permitted (type=extra_forbidden)"}

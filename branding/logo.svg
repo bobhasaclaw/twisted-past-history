@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0b09"/>
+      <stop offset="100%" style="stop-color:#1c1714"/>
+    </linearGradient>
+    <linearGradient id="stone" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8a7356"/>
+      <stop offset="40%" style="stop-color:#c4b08a"/>
+      <stop offset="70%" style="stop-color:#9c8668"/>
+      <stop offset="100%" style="stop-color:#6e5c44"/>
+    </linearGradient>
+    <linearGradient id="stoneV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#b0956e"/>
+      <stop offset="100%" style="stop-color:#5c4a34"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c8923a"/>
+      <stop offset="100%" style="stop-color:#8a6418"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="45%">
+      <stop offset="0%" style="stop-color:#c8923a;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#c8923a;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg)"/>
+
+  <!-- Ambient glow behind pillars -->
+  <ellipse cx="200" cy="175" rx="130" ry="130" fill="url(#glow)"/>
+
+  <!-- ===== PILLAR 1 — center, tallest =====
+       Base: x=168, y=318, w=64, h=200 -->
+  <rect x="168" y="178" width="64" height="200" rx="3" ry="3" fill="url(#stone)" filter="url(#shadow)"/>
+  <!-- Pillar 1 — left face (3D depth) -->
+  <rect x="232" y="178" width="14" height="200" rx="0 3 3 0" fill="#4a3c2c" opacity="0.7"/>
+  <!-- Pillar 1 — capital top bevel -->
+  <rect x="158" y="170" width="84" height="16" rx="2" fill="url(#stoneV)"/>
+  <!-- Pillar 1 — base bevel -->
+  <rect x="158" y="372" width="84" height="12" rx="2" fill="url(#stoneV)"/>
+  <!-- Subtle carved horizontal line on pillar -->
+  <rect x="172" y="220" width="56" height="3" rx="1" fill="#c8923a" opacity="0.5"/>
+  <rect x="172" y="265" width="56" height="3" rx="1" fill="#c8923a" opacity="0.5"/>
+  <rect x="172" y="310" width="56" height="3" rx="1" fill="#c8923a" opacity="0.5"/>
+
+  <!-- ===== PILLAR 2 — left, shorter =====
+       Base: x=76, y=248, w=56, h=160 -->
+  <rect x="76" y="248" width="56" height="160" rx="3" ry="3" fill="url(#stone)" opacity="0.9"/>
+  <rect x="132" y="248" width="12" height="160" rx="0 3 3 0" fill="#4a3c2c" opacity="0.6"/>
+  <rect x="66" y="240" width="76" height="14" rx="2" fill="url(#stoneV)"/>
+  <rect x="66" y="402" width="76" height="10" rx="2" fill="url(#stoneV)"/>
+
+  <!-- ===== PILLAR 3 — right, shortest =====
+       Base: x=268, y=283, w=52, h=125 -->
+  <rect x="268" y="283" width="52" height="125" rx="3" ry="3" fill="url(#stone)" opacity="0.88"/>
+  <rect x="320" y="283" width="11" height="125" rx="0 3 3 0" fill="#4a3c2c" opacity="0.6"/>
+  <rect x="259" y="275" width="70" height="14" rx="2" fill="url(#stoneV)"/>
+  <rect x="259" y="402" width="70" height="10" rx="2" fill="url(#stoneV)"/>
+
+  <!-- ===== SERPENT — winding from behind left pillar =====
+       Curved path suggesting a coiled serpent in profile,
+       with diamond/rhombus geometric head -->
+  <!-- Body: thick curved stroke -->
+  <path d="M 68 380 Q 90 355 105 335 Q 125 305 155 290 Q 185 275 210 278 Q 235 282 245 300"
+        fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round" opacity="0.9"/>
+  <!-- Head — diamond shape -->
+  <polygon points="245,290 256,300 245,310 234,300" fill="url(#gold)" opacity="0.95"/>
+  <!-- Eye dot -->
+  <circle cx="250" cy="299" r="2.5" fill="#1c1714"/>
+  <!-- Scales: short perpendicular tick marks along body -->
+  <line x1="88" y1="350" x2="92" y2="343" stroke="#c8923a" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="108" y1="330" x2="113" y2="323" stroke="#c8923a" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+  <line x1="133" y1="302" x2="138" y2="295" stroke="#c8923a" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <line x1="162" y1="283" x2="167" y2="276" stroke="#c8923a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  <line x1="195" y1="275" x2="200" y2="268" stroke="#c8923a" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- ===== EYE OF DISCOVERY — open eye in upper sky =====
+       Stylized single eye: almond outline + iris + pupil + highlight.
+       Suggests awareness, observation, the act of seeing the past. -->
+  <!-- Outer glow -->
+  <ellipse cx="200" cy="92" rx="50" ry="28" fill="#c8923a" opacity="0.08"/>
+  <!-- Almond shape -->
+  <path d="M 148 92 Q 200 52 252 92 Q 200 132 148 92 Z"
+        fill="none" stroke="url(#gold)" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Iris -->
+  <circle cx="200" cy="92" r="20" fill="url(#gold)" opacity="0.8"/>
+  <!-- Pupil -->
+  <circle cx="200" cy="92" r="10" fill="#1c1714"/>
+  <!-- Reflection highlight -->
+  <circle cx="207" cy="85" r="5" fill="white" opacity="0.55"/>
+  <!-- Upper lid detail -->
+  <path d="M 148 92 Q 200 52 252 92" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.4"/>
+
+  <!-- ===== GROUND LINE — subtle base platform =====
+       Rough stone floor, suggests archaeological site floor -->
+  <rect x="40" y="400" width="320" height="18" rx="0" fill="#1c1714" opacity="0.6"/>
+  <rect x="40" y="396" width="320" height="6" rx="0" fill="#2a241c" opacity="0.8"/>
+
+</svg>
